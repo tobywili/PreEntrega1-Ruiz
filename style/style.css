@@ -52,10 +52,9 @@ main{
 .formulario{
     width: 60%;
 }
-.containerbio{
+.col{
     background-color: darkolivegreen;
     color: darkkhaki;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 85%;
-
 }
