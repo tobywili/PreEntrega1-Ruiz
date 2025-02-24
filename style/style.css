@@ -46,6 +46,7 @@ h3{
     background-color: forestgreen;
     }
 main{
+    background-color: rgb(161, 93, 4);
     
     justify-items: center;
 }
@@ -57,4 +58,7 @@ main{
     color: darkkhaki;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 85%;
+}
+footer{
+    background-color: darkolivegreen;
 }
