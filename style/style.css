@@ -25,6 +25,8 @@ h3{
 }
 .form-row{
  background-color: darkslategrey;
+ justify-content: center;
+ 
     
 }
 .containerbio{
@@ -38,10 +40,14 @@ h3{
 
 
 #carouselExample{
+    justify-content: center;
     width: 60%;
     background-color: forestgreen;
-    justify-content: center;
+    }
+main{
     
-    
+    justify-items: center;
 }
-
+.formulario{
+    width: 60%;
+}
