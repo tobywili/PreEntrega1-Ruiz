@@ -1,5 +1,5 @@
 .body{
-  
+  background-image: url(/assets/img/15395133.jpeg);
     margin: 0%;
     padding: 0%;
     border: 0;
@@ -34,4 +34,11 @@ h3{
 }
 .ul{
     background-color: darkgreen;
+}
+.container-disk{
+display: flex;
+background-color: darkorange;
+}
+.p-3{
+    background-color: darkgoldenrod;
 }
