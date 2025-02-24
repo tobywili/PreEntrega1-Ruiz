@@ -1,5 +1,4 @@
 .body{
-    background-color: color-mix(in xyz-d65, color percentage, color percentage);
     margin: 0%;
     padding: 0%;
     border: 0;
@@ -35,18 +34,14 @@ h3{
 .ul{
     background-color: darkgreen;
 }
-.container-disk{
-justify-items: center;
-background-color: darkorange;
-}
-.p-3{
-    background-color: darkgoldenrod;
-}
+
+
+
 #carouselExample{
     width: 60%;
+    background-color: forestgreen;
+    justify-content: center;
     
     
 }
-main{
-    justify-items: center;
-}
+
