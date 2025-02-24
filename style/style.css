@@ -1,5 +1,5 @@
 .body{
-  background-image: url(/assets/img/15395133.jpeg);
+    background-color: color-mix(in xyz-d65, color percentage, color percentage);
     margin: 0%;
     padding: 0%;
     border: 0;
@@ -41,4 +41,11 @@ background-color: darkorange;
 }
 .p-3{
     background-color: darkgoldenrod;
+}
+#carouselExample{
+    width: 50%;
+    
+}
+.carousel {
+    align-items: center;
 }
