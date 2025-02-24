@@ -26,7 +26,8 @@ h3{
 .form-row{
  background-color: darkslategrey;
  justify-content: center;
- 
+ width: 100%;
+
     
 }
 .containerbio{
@@ -50,4 +51,11 @@ main{
 }
 .formulario{
     width: 60%;
+}
+.containerbio{
+    background-color: darkolivegreen;
+    color: darkkhaki;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 85%;
+
 }
