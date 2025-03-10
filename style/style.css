@@ -169,4 +169,15 @@ p {
   color: black;
 }
 
+.disco {
+  background-color: #9c9a9a;
+  min-width: 300px;
+  display: grid;
+  display: flex;
+  justify-content: center;
+  border-style: dashed;
+  margin: 10px;
+  padding: 15px;
+}
+
 /*# sourceMappingURL=style.css.map */
