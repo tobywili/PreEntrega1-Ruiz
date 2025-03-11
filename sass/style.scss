@@ -216,11 +216,13 @@ justify-content: center;
 	padding: 20px 20px;
 	border-right: 1px solid #6b6a6a;
 	text-decoration: none;
+	color: #b8b3b3;
   }
   
   .header li a:hover,
   .header .menu-btn:hover {
 	background-color: #4d4747;
+	
   }
   
   .header .logo {
@@ -283,6 +285,8 @@ justify-content: center;
   
   .header .menu-btn {
 	display: none;
+	color: #97d848;
+	
   }
   
   .header .menu-btn:checked ~ .menu {
@@ -314,6 +318,7 @@ justify-content: center;
 	}
 	.header li a {
 	  padding: 20px 30px;
+	  
 	}
 	.header .menu {
 	  clear: none;
@@ -324,3 +329,6 @@ justify-content: center;
 	  display: none;
 	}
   }
+.btn{
+	color: #97d848;
+}
