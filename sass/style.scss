@@ -9,28 +9,29 @@ width:85%;
 
 }
 .card-body{
-    background-color: dimgrey;
+    background-image: linear-gradient(to right, #4b4949, rgb(10, 10, 10) )
     
 }
 body{
 	height: 100%; 
 	font-family: 'Noto Sans', sans-serif;
-  background-color: #636062; 
+  background-image: linear-gradient(to right, #4b4a4a, rgb(10, 10, 10) );
   
 }
 
 
 .contact_form{	
-	
+	display: flex;
+	align-items: center;
 	width: 460px; 
 	height: auto;
    
-  margin: 80px auto;
+  margin: 8px ;
 	border-radius: 10px;  
-	padding-top: 30px;
+	padding-top:100px;
 	padding-bottom: 20px;  
-  background-color: #383737; 
-  padding-left: 30px; 
+	background-image: linear-gradient(to right, #7a7979, rgb(10, 10, 10) ); 
+  padding-left: 50px;
   
    }
 
@@ -87,7 +88,7 @@ button{
 
 
 button p{
-	color: #443a3a; 
+	color: #141414; 
 }
 
 
@@ -98,7 +99,7 @@ span{
 
 .aviso{
 	font-size: 13px;  
-	color: #b8b3b3;  
+	color: #5a5656;  
 }
 
 
@@ -135,13 +136,13 @@ p{
 
 .formulario input:focus{
 	outline:0;
-	border: 1px solid #97d848;
+	border: 1px solid #0c0c0b;
 }
 
 
 .formulario textarea:focus{
 	outline:0;
-	border: 1px solid #97d848;
+	border: 1px solid #121312;
 }
 
 .bio{
@@ -194,14 +195,15 @@ p{
 .header {
 display: flex;
 justify-content: center;
+background-image: linear-gradient(to right, #4b4a4a, rgb(10, 10, 10) );
+
 	
-	box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
 	position: fixed;
 	width: 100%;
 	z-index: 3;
 	padding: 0%;
 	align-items: center;
-	color: #9c9a9a;
+	
   }
 
   .header ul {
@@ -246,7 +248,6 @@ justify-content: center;
   
   .header .menu-icon {
 	cursor: pointer;
-	display: inline-block;
 	float: right;
 	padding: 28px 20px;
 	position: relative;
@@ -333,7 +334,7 @@ justify-content: center;
   }
 
   .btn{
-	color: #97d848;
+	color: #0f0f0f;
   }
   
   .disco01{
@@ -343,6 +344,10 @@ justify-content: center;
 	justify-content: center;
 	margin: 10px;
 	padding: 15px;
+  }
+  .music{
+	display: flex;
+	justify-content: center;
   }
   .spotyfy{
 	display: flex;
@@ -356,4 +361,13 @@ justify-content: center;
 	display: flex;
 	columns: 2;
 	margin: 50px;
+}
+.card-text{
+	color: #949393;
+}
+.card-title{
+	color: #b8b3b3;
+}
+h2{
+	color: #b8b3b3;
 }
