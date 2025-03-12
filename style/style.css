@@ -14,15 +14,24 @@ body {
 
 .contact_form {
   display: flex;
-  align-items: center;
-  width: 460px;
+  align-items: end;
+  width: 100%;
   height: auto;
+  justify-content: center;
   margin: 8px;
   border-radius: 10px;
   padding-top: 100px;
   padding-bottom: 20px;
-  background-image: linear-gradient(to right, #7a7979, rgb(10, 10, 10));
+  background-image: linear-gradient(to right, #1a1818, rgb(102, 98, 98));
   padding-left: 50px;
+}
+
+.obligatorio {
+  color: #ebdede;
+}
+
+.aviso {
+  color: #b1abaf;
 }
 
 input {
@@ -160,13 +169,13 @@ p {
   align-items: center;
 }
 
-.disco1 {
+.disco01 {
+  background-image: linear-gradient(to right, #4b4a4a, rgb(10, 10, 10));
   display: flex;
-  justify-content: center;
-  display: grid;
-  top: 50%;
-  left: 50%;
   align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 15px;
 }
 
 .header {
@@ -186,6 +195,7 @@ p {
   list-style: none;
   overflow: hidden;
   background-color: #333;
+  width: auto;
 }
 
 .header li a {
@@ -232,7 +242,7 @@ p {
   height: 2px;
   position: relative;
   transition: 0.2s ease-out;
-  width: 18px;
+  width: 5%;
 }
 
 .header .menu-icon .navicon:before,
@@ -298,35 +308,9 @@ p {
     display: none;
   }
 }
-.btn {
-  color: #0f0f0f;
-}
-
-.disco01 {
-  color: #0a0a0a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  padding: 15px;
-}
-
 .music {
   display: flex;
   justify-content: center;
-}
-
-.spotyfy {
-  display: flex;
-  columns: 2;
-  margin: 50px;
-  padding-top: 200px;
-}
-
-.youtube {
-  display: flex;
-  columns: 2;
-  margin: 50px;
 }
 
 .card-text {
@@ -339,6 +323,11 @@ p {
 
 h2 {
   color: #b8b3b3;
+}
+
+.playlist {
+  display: flex;
+  justify-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
