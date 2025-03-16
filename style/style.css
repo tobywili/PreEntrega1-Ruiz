@@ -1,333 +1,176 @@
-.container {
-  width: 85%;
-}
-
-.card-body {
-  background-image: linear-gradient(to right, #4b4949, rgb(10, 10, 10));
-}
-
+@charset "UTF-8";
+/* Estilos generales */
 body {
-  height: 100%;
-  font-family: "Noto Sans", sans-serif;
-  background-image: linear-gradient(to right, #4b4a4a, rgb(10, 10, 10));
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #464141;
+}
+
+header {
+  background-color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar .logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: active;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: active;
+  color: #fff;
+  font-size: 18px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    background: #333;
+    display: none; /* Se muestra cuando se agrega la clase 'active' */
+    flex-direction: column;
+    z-index: 1000; /* Valor mayor para que esté por encima de otros elementos */
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links.active {
+    display: block;
+  }
+  .nav-links li {
+    margin: 15px 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+main {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #4e4949;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
 .contact_form {
-  display: flex;
-  align-items: end;
   width: 100%;
-  height: auto;
-  justify-content: center;
-  margin: 8px;
-  border-radius: 10px;
-  padding-top: 100px;
-  padding-bottom: 20px;
-  background-image: linear-gradient(to right, #1a1818, rgb(102, 98, 98));
-  padding-left: 50px;
-}
-
-.obligatorio {
-  color: #ebdede;
-}
-
-.aviso {
-  color: #b1abaf;
-}
-
-input {
-  background-color: #fbfbfb;
-  width: 408px;
-  height: 40px;
+  max-width: 600px;
+  background: #727070;
+  padding: 2rem;
   border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #b1abaf;
-  margin-top: 10px;
-  padding-left: 10px;
-  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(37, 2, 2, 0.1);
 }
-
-textarea {
-  background-color: #fbfbfb;
-  width: 405px;
-  height: 150px;
-  border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #a08b9b;
-  margin-top: 10px;
-  padding-left: 10px;
-  margin-bottom: 20px;
-  padding-top: 15px;
+.contact_form .formulario h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
-
-label {
+.contact_form .formulario h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+.contact_form .formulario form p {
+  margin-bottom: 1rem;
+}
+.contact_form .formulario form p label {
   display: block;
-  float: center;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #333;
 }
-
-button {
-  height: 45px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  text-transform: uppercase;
-  background-color: #6d6a6c;
-  border-color: #464546;
-  border-style: solid;
-  border-radius: 10px;
-  width: 420px;
-  cursor: pointer;
+.contact_form .formulario form p label .obligatorio {
+  color: rgb(238, 5, 5);
 }
-
-button p {
-  color: #141414;
-}
-
-span {
-  color: #3d393c;
-}
-
-.aviso {
-  font-size: 13px;
-  color: #5a5656;
-}
-
-h1 {
-  font-size: 39px;
-  text-align: letf;
-  padding-bottom: 20px;
-  color: #eedcea;
-}
-
-h3 {
-  font-size: 16px;
-  padding-bottom: 30px;
-  color: #aca7a7;
-}
-
-p {
-  font-size: 14px;
-  color: #9c9a9a;
-}
-
-::-webkit-input-placeholder {
-  color: #a8a8a8;
-}
-
-::-webkit-textarea-placeholder {
-  color: #a8a8a8;
-}
-
-.formulario input:focus {
-  outline: 0;
-  border: 1px solid #0c0c0b;
-}
-
-.formulario textarea:focus {
-  outline: 0;
-  border: 1px solid #121312;
-}
-
-.bio {
-  display: grid;
-  margin: auto;
-  place-items: center;
-}
-
-.parrafobio {
-  margin: 8%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: #a8a8a8;
-  padding: 8px;
-  margin: 15px;
-}
-
-.nav-link {
-  color: black;
-}
-
-.disco {
-  background-color: #9c9a9a;
-  min-width: 300px;
-  display: grid;
-  display: flex;
-  justify-content: center;
-  border-style: dashed;
-  margin: 100px;
-  padding: 30px;
-  align-items: center;
-}
-
-.sub {
-  display: flex;
-  justify-content: center;
-  display: grid;
-  top: 50%;
-  left: 50%;
-  align-items: center;
-}
-
-.disco01 {
-  background-image: linear-gradient(to right, #4b4a4a, rgb(10, 10, 10));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  padding: 15px;
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-  background-image: linear-gradient(to right, #4b4a4a, rgb(10, 10, 10));
-  position: fixed;
+.contact_form .formulario form p input,
+.contact_form .formulario form p textarea {
   width: 100%;
-  z-index: 3;
-  padding: 0%;
-  align-items: center;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #a5a3a3;
+  border-radius: 4px;
+  color: #333;
+  transition: border-color 0.3s ease;
 }
-
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  background-color: #333;
-  width: auto;
+.contact_form .formulario form p input:focus,
+.contact_form .formulario form p textarea:focus {
+  outline: none;
+  border-color: #0c0c0c;
 }
-
-.header li a {
-  display: block;
-  padding: 20px 20px;
-  border-right: 1px solid #6b6a6a;
-  text-decoration: none;
-  color: #b8b3b3;
+.contact_form .formulario form p textarea {
+  resize: vertical;
+  min-height: 100px;
 }
-
-.header li a:hover,
-.header .menu-btn:hover {
-  background-color: #4d4747;
-}
-
-.header .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
-  padding: 10px 20px;
-  text-decoration: none;
-}
-
-/* menu */
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-/* menu icon */
-.header .menu-icon {
-  cursor: pointer;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-  background-color: #aca7a7;
-}
-
-.header .menu-icon .navicon {
-  background-color: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: 0.2s ease-out;
-  width: 5%;
-}
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
+.contact_form .formulario form button {
+  width: 100%;
+  padding: 0.75rem;
   background: #333;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
+  border: none;
+  border-radius: 4px;
+  color: #727070;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
-
-.header .menu-icon .navicon:before {
-  top: 5px;
+.contact_form .formulario form button:hover {
+  background: #0c0c0c;
 }
-
-.header .menu-icon .navicon:after {
-  top: -5px;
+.contact_form .formulario form button p {
+  margin: 0;
 }
-
-/* menu btn */
-.header .menu-btn {
-  display: none;
-  color: #f5f8f0;
+.contact_form .formulario form .aviso {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 1rem;
 }
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 225px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-/* 48em = 768px */
-@media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
-  .header li a {
-    padding: 20px 30px;
-  }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-}
-.music {
-  display: flex;
-  justify-content: center;
-}
-
-.card-text {
-  color: #949393;
-}
-
-.card-title {
-  color: #b8b3b3;
-}
-
-h2 {
-  color: #b8b3b3;
-}
-
-.playlist {
-  display: flex;
-  justify-items: center;
+.contact_form .formulario form .aviso .obligatorio {
+  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */
