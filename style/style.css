@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-image: linear-gradient(to right, #333, #ccc);
 }
 
 .navbar {
@@ -38,7 +38,7 @@ header {
 
 .nav-links a {
   text-decoration: active;
-  color: #fff;
+  color: #5f5f5f;
   font-size: 18px;
 }
 
@@ -171,6 +171,10 @@ main {
 }
 .contact_form .formulario form .aviso .obligatorio {
   color: red;
+}
+
+footer {
+  background-image: linear-gradient(to right, #1a1919, #ccc);
 }
 
 /*# sourceMappingURL=style.css.map */
