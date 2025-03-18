@@ -120,6 +120,7 @@ main {
   padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(37, 2, 2, 0.1);
+  background-image: linear-gradient( to right, #1a1919, #ccc);
 
   .formulario {
     h1 {
@@ -139,6 +140,8 @@ main {
     form {
       p {
         margin-bottom: 1rem;
+        
+
         
         label {
           display: block;
