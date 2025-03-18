@@ -211,8 +211,16 @@ main {
 }
 footer{
     background-image: linear-gradient( to right, #1a1919, #ccc);
-
+   
 }
+section a {
+  margin-right: 10px; /* Ajusta según necesidad */
+}
+section a:last-child {
+  margin-right: 0;
+}
+
+
 
 .contenedor {
   max-width: 600px;
