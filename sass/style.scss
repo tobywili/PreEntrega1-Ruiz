@@ -58,7 +58,7 @@ header {
     margin: 6px 0;
 }
 
-/* Estilos para pantallas pequeñas */
+/* Estilos para pantallas MOBILES */
 @media screen and (max-width: 768px) {
     .nav-links {
         position: absolute;
@@ -90,11 +90,11 @@ header {
     }
 }
 main {
-    width: 80%; // o el ancho que desees
+    width: 80%; 
     margin: 0 auto;
     background-color: #4e4949;
   }
-  // Variables para facilitar cambios de color y tamaños
+  
 $primary-color: #333;
 $secondary-color: #0c0c0c;
 $background-color: #615e5e;
@@ -102,7 +102,7 @@ $white: #727070;
 $input-border: #a5a3a3;
 $border-radius: 4px;
 
-// Estilo global para centrar el contenido del main
+
 main {
   display: flex;
   justify-content: center;
@@ -216,7 +216,7 @@ footer{
    
 }
 section a {
-  margin-right: 10px; /* Ajusta según necesidad */
+  margin-right: 10px; 
 }
 section a:last-child {
   margin-right: 0;
