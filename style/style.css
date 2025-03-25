@@ -12,7 +12,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: black;
+  background-color: rgb(49, 47, 47);
   position: relative;
 }
 
@@ -80,7 +80,7 @@ body {
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(68, 68, 68, 0.95);
     text-align: center;
     padding: 20px 0;
     z-index: 1000;
