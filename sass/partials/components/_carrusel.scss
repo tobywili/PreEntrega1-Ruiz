@@ -15,7 +15,7 @@ h1 {
 .carousel-inner img {
   width: 100%; /* Hacer que las imágenes ocupen todo el ancho del contenedor */
   height: auto; /* Mantener la proporción de la imagen */
-  max-height: auto; /* Limitar la altura de las imágenes */
+  
   object-fit: cover; /* Asegurar que las imágenes se ajusten sin deformarse */
   border-radius: 10px; /* Bordes redondeados */
 }
