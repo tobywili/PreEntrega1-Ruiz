@@ -125,7 +125,7 @@ h1 {
     max-width: 95%; /* Hacerlo más ancho en móviles */
   }
   .carousel-inner img {
-    max-height: 250px; /* Reducir altura en móviles */
+    max-height: 600px; /* Reducir altura en móviles */
   }
 }
 @media (max-width: 480px) {
