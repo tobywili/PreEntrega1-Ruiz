@@ -1,0 +1,48 @@
+/* 🖌 Estilos generales */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* 📌 Estilos del carrusel */
+.carousel {
+  max-width: 50%; /* Ajustar el ancho del carrusel */
+  margin: auto; /* Centrar el carrusel */
+}
+
+.carousel-inner img {
+  width: 100%; /* Hacer que las imágenes ocupen todo el ancho del contenedor */
+  height: auto; /* Mantener la proporción de la imagen */
+  max-height: auto; /* Limitar la altura de las imágenes */
+  object-fit: cover; /* Asegurar que las imágenes se ajusten sin deformarse */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* 📱 Estilos Responsivos */
+@media (max-width: 1024px) {
+  .carousel-inner img {
+      max-height: 300px; /* Reducir altura en tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+      max-width: 95%; /* Hacerlo más ancho en móviles */
+  }
+
+  .carousel-inner img {
+      max-height: 250px; /* Reducir altura en móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.5rem; /* Reducir tamaño del título en pantallas pequeñas */
+  }
+
+  .carousel-inner img {
+      max-height: 200px; /* Ajustar imágenes en móviles pequeños */
+  }
+}

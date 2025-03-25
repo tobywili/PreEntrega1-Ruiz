@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* Estilos generales */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,374 +6,357 @@ body {
   background-color: #464141;
 }
 
-header {
-  background-image: linear-gradient(to right, #333, #ccc);
-}
-
+/* 📌 ESTILOS GENERALES */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  background-color: black;
+  position: relative;
 }
 
-.navbar .logo a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: active;
-  margin: 0;
-  padding: 0;
+.logo {
   display: flex;
+  align-items: center;
 }
 
-.nav-links li {
-  margin-left: 20px;
+.logo img {
+  width: 130px;
+  height: auto;
 }
 
-.nav-links a {
-  text-decoration: active;
-  color: #5f5f5f;
-  font-size: 18px;
+.logo a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
+/* 📌 MENÚ HAMBURGUESA */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 1001; /* Asegurar que esté por encima del menú */
 }
 
 .hamburger .line {
   width: 30px;
   height: 3px;
-  background-color: #fff;
-  margin: 6px 0;
+  background-color: white;
+  margin: 5px 0;
 }
 
-/* Estilos para pantallas pequeñas */
-@media screen and (max-width: 768px) {
+/* 📌 ESTILOS DEL MENÚ DE NAVEGACIÓN */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #f39c12;
+}
+
+/* 📱 RESPONSIVE: Menú hamburguesa en móviles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Mostrar el icono hamburguesa */
+  }
   .nav-links {
+    display: none;
+    flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 0;
+    left: 0;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
     text-align: center;
-    background: #333;
-    display: none; /* Se muestra cuando se agrega la clase 'active' */
-    flex-direction: column;
-    z-index: 1000; /* Valor mayor para que esté por encima de otros elementos */
+    padding: 20px 0;
+    z-index: 1000;
   }
   .nav-links.active {
-    display: flex;
-  }
-  .nav-links.active {
-    display: block;
+    display: flex; /* Mostrar el menú cuando se active */
   }
   .nav-links li {
-    margin: 15px 0;
-  }
-  .hamburger {
-    display: flex;
+    padding: 15px 0;
   }
 }
-main {
-  width: 80%;
-  margin: 0 auto;
-  background-color: #4e4949;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 2rem;
-}
-
-.contact_form {
-  width: 100%;
-  max-width: 600px;
-  background: #727070;
-  padding: 2rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(37, 2, 2, 0.1);
-  background-image: linear-gradient(to right, #464545, #6e6c6c);
-}
-.contact_form .formulario h1 {
+/* 🖌 Estilos generales */
+h1 {
+  text-align: center;
   font-size: 2rem;
-  text-align: center;
-  color: #a5a3a3;
-  margin-bottom: 0.5rem;
-}
-.contact_form .formulario h3 {
-  font-size: 1.2rem;
-  text-align: center;
-  color: #a5a3a3;
-  margin-bottom: 1.5rem;
-}
-.contact_form .formulario form p {
-  margin-bottom: 1rem;
-  color: #ccc;
-}
-.contact_form .formulario form p label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.3rem;
-  color: #333;
-}
-.contact_form .formulario form p label .obligatorio {
-  color: rgb(238, 5, 5);
-}
-.contact_form .formulario form p input,
-.contact_form .formulario form p textarea {
-  width: 100%;
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #a5a3a3;
-  border-radius: 4px;
-  color: #333;
-  transition: border-color 0.3s ease;
-}
-.contact_form .formulario form p input:focus,
-.contact_form .formulario form p textarea:focus {
-  outline: none;
-  border-color: #0c0c0c;
-}
-.contact_form .formulario form p textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-.contact_form .formulario form button {
-  width: 100%;
-  padding: 0.75rem;
-  background: #333;
-  border: none;
-  border-radius: 4px;
-  color: #d3d3d3;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.contact_form .formulario form button:hover {
-  background: #0c0c0c;
-}
-.contact_form .formulario form button p {
-  margin: 0;
-  color: #ccc;
-}
-.contact_form .formulario form .aviso {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-top: 1rem;
-}
-.contact_form .formulario form .aviso .obligatorio {
-  color: red;
-}
-
-footer {
-  background-image: linear-gradient(to right, #1a1919, #ccc);
-}
-
-section a {
-  margin-right: 10px; /* Ajusta según necesidad */
-}
-
-section a:last-child {
-  margin-right: 0;
-}
-
-.contenedor {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-.contenedor .listas {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
+  color: white;
   margin-bottom: 20px;
 }
-.contenedor .lista {
-  list-style-type: none;
-  padding: 0;
-  background-color: #f4f4f4;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-.contenedor .parrafo {
-  font-size: 18px;
-  color: #706d6d;
+
+/* 📌 Estilos del carrusel */
+.carousel {
+  max-width: 50%; /* Ajustar el ancho del carrusel */
+  margin: auto; /* Centrar el carrusel */
 }
 
-.contenedor2 {
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-  color: #d3d3d3;
+.carousel-inner img {
+  width: 100%; /* Hacer que las imágenes ocupen todo el ancho del contenedor */
+  height: auto; /* Mantener la proporción de la imagen */
+  max-height: auto; /* Limitar la altura de las imágenes */
+  object-fit: cover; /* Asegurar que las imágenes se ajusten sin deformarse */
+  border-radius: 10px; /* Bordes redondeados */
 }
-.contenedor2 .listas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+
+/* 📱 Estilos Responsivos */
+@media (max-width: 1024px) {
+  .carousel-inner img {
+    max-height: 300px; /* Reducir altura en tablets */
+  }
 }
-.contenedor2 .lista {
-  background-color: #2c2c2c;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  text-align: left;
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 95%; /* Hacerlo más ancho en móviles */
+  }
+  .carousel-inner img {
+    max-height: 250px; /* Reducir altura en móviles */
+  }
 }
-.contenedor2 .lista ul {
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Reducir tamaño del título en pantallas pequeñas */
+  }
+  .carousel-inner img {
+    max-height: 200px; /* Ajustar imágenes en móviles pequeños */
+  }
+}
+/* 🌍 Estilos generales */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #1a1a1a; /* Fondo oscuro para contraste */
+  color: #f5f5f5; /* Texto claro */
+  margin: 0;
   padding: 0;
-  list-style: none;
+  text-align: center; /* Centrar contenido */
 }
-.contenedor2 img {
-  display: block;
-  margin: 10px auto;
-  border-radius: 8px;
+
+/* 🖋 Títulos */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffcc00; /* Destacar el título */
 }
-.contenedor2 h2 {
-  font-size: 22px;
-  color: #e0e0e0;
+
+h2 {
+  font-size: 1.8rem;
+  color: #ff9900;
+  margin-bottom: 15px;
 }
-.contenedor2 .parrafo {
-  font-size: 16px;
-  line-height: 1.6;
+
+/* 📜 Párrafos */
+.parrafobio {
+  font-size: 1.2rem;
+  line-height: 1.8; /* Mejor legibilidad */
   text-align: justify;
-  margin-top: 20px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.playlist {
-  width: 80%;
-  max-width: 600px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 20px;
+  max-width: 800px;
+  margin: 10px auto; /* Centrado */
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1); /* Fondo sutil */
   border-radius: 10px;
 }
 
-iframe {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 12px;
-  border: none;
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: auto;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  border: none;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #191414;
-  padding: 10px 20px;
-  position: relative;
-}
-.navbar .logo {
-  display: flex;
-  align-items: center;
-}
-.navbar .logo img {
-  width: 50px;
+/* 📸 Imágenes */
+.bio img {
+  width: 60%;
+  max-width: 500px; /* Control del tamaño */
   height: auto;
-  border-radius: 50%;
-  margin-right: 10px;
+  display: block;
+  margin: 20px auto; /* Centrado */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
-.navbar .logo a {
-  text-decoration: none;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-.navbar .logo a:hover {
-  color: #1db954;
-}
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.navbar .nav-links li a {
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 15px;
-  border-radius: 8px;
-  color: white;
-  background: #535353;
-  transition: all 0.3s ease;
-}
-.navbar .nav-links li a:hover {
-  background: rgb(156, 155, 155);
-  color: #454746;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-}
-.navbar .hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-.navbar .hamburger .line {
-  width: 30px;
-  height: 3px;
-  background: white;
-  transition: transform 0.3s ease;
-}
+
+/* 📱 Estilos Responsivos */
 @media (max-width: 768px) {
-  .navbar .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #191414;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    padding: 10px;
-    border-radius: 10px;
+  h1 {
+    font-size: 2rem;
   }
-  .navbar .nav-links li {
-    text-align: center;
-    margin: 10px 0;
+  h2 {
+    font-size: 1.5rem;
   }
-  .navbar .nav-links.active {
-    display: flex;
+  .parrafobio {
+    font-size: 1rem;
+    max-width: 90%;
+    padding: 8px;
   }
-  .navbar .hamburger {
-    display: flex;
+  .bio img {
+    width: 80%;
+  }
+}
+/* 📧 Contenedor del formulario */
+.contact_form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 🖋 Títulos */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ff9900;
+}
+
+/* 📝 Campos del formulario */
+form p {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  background: #2a2a2a;
+  color: #fff;
+  outline: none;
+}
+
+/*  Placeholder estilizado */
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/*  Ajustes al textarea */
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* 🔘 Botón */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #ffcc00;
+  color: #1a1a1a;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #ff9900;
+}
+
+/* 📱 Estilos Responsivos */
+@media (max-width: 768px) {
+  .contact_form {
+    width: 90%;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  input, textarea {
+    font-size: 0.9rem;
+  }
+  button {
+    font-size: 1rem;
+  }
+}
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #1a1a1a; /* Fondo oscuro */
+  color: #f5f5f5; /* Texto claro */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🎼 Contenedor principal */
+.listas {
+  list-style: none;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 📜 Listas */
+.lista {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.lista h2 {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.lista ul {
+  padding-left: 20px;
+}
+
+.lista li {
+  list-style: none;
+  font-size: 1.2rem;
+  margin: 8px 0;
+  padding: 5px 0;
+  transition: 0.3s ease-in-out;
+}
+
+/* 🎶 Efecto hover */
+.lista li:hover {
+  color: #ff9900;
+  transform: scale(1.05);
+}
+
+/* 📱 Estilos Responsivos */
+@media (max-width: 768px) {
+  .listas {
+    width: 90%;
+    padding: 15px;
+  }
+  .lista h2 {
+    font-size: 1.3rem;
+  }
+  .lista li {
+    font-size: 1rem;
   }
 }
 

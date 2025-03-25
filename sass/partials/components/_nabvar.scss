@@ -1,0 +1,89 @@
+/* 📌 ESTILOS GENERALES */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: black;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 130px;
+  height: auto;
+}
+
+.logo a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* 📌 MENÚ HAMBURGUESA */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001; /* Asegurar que esté por encima del menú */
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* 📌 ESTILOS DEL MENÚ DE NAVEGACIÓN */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #f39c12;
+}
+
+/* 📱 RESPONSIVE: Menú hamburguesa en móviles */
+@media (max-width: 768px) {
+  .hamburger {
+      display: flex; /* Mostrar el icono hamburguesa */
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      text-align: center;
+      padding: 20px 0;
+      z-index: 1000;
+  }
+
+  .nav-links.active {
+      display: flex; /* Mostrar el menú cuando se active */
+  }
+
+  .nav-links li {
+      padding: 15px 0;
+  }
+}
