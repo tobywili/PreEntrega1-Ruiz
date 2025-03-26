@@ -273,6 +273,11 @@ button:hover {
   background: #7e7d7c;
 }
 
+@media (max-width: 768px) {
+  [data-aos=zoom-in-right] {
+    animation: none !important; /* Desactiva la animación */
+  }
+}
 /* 📱 Estilos Responsivos */
 @media (max-width: 768px) {
   .contact_form {
