@@ -135,6 +135,12 @@ h1 {
     max-height: 200px; /* Ajustar imágenes en móviles pequeños */
   }
 }
+.carousel-item img {
+  width: 100%;
+  height: 500px; /* Ajusta según tu necesidad */
+  object-fit: cover; /* Recorta la imagen para que se ajuste al contenedor */
+}
+
 /* 🌍 Estilos generales */
 body {
   font-family: "Arial", sans-serif;
